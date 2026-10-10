@@ -1,0 +1,4 @@
+LSPlant d8b5d1dbb664abc606644036822e4bb64547edf6
+DexBuilder ac7fb2230954ee311808bad469b0db501f31bfb8
+parallel-hashmap 0cd57d29a959256ed66b2afdd1009928fc625d09
+Dobby io.github.vvb2060.ndk:dobby:1.2

@@ -1,0 +1,6 @@
+id=tablet-spoof-pure
+name=微信与企业微信平板登录（纯 Zygisk）
+version=3.0.0
+versionCode=30002
+author=Tablet Spoof
+description=独立 Zygisk 平板判定，无需 LSPosed。实测微信 8.0.78、企业微信 5.0.3。操作按钮开关，强停应用生效；保留全局 DPI、分辨率与聊天数据。

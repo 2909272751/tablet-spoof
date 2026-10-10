@@ -1,0 +1,82 @@
+[
+  {
+    "package": "com.tencent.wework",
+    "enabled": false,
+    "pad_entry": false,
+    "evidence": "round-1-off-wework"
+  },
+  {
+    "package": "com.tencent.mm",
+    "enabled": false,
+    "pad_entry": false,
+    "evidence": "round-2-off-mm"
+  },
+  {
+    "package": "com.tencent.wework",
+    "enabled": true,
+    "pad_entry": true,
+    "evidence": "round-3-on-wework",
+    "hook_status": {
+      "package": "com.tencent.wework",
+      "pid": "10678",
+      "engine": "zygisk-lsplant",
+      "hooks": "1",
+      "hits": "3",
+      "detail": "READY com.tencent.wework.foundation.logic.Application.isAndroidPad"
+    }
+  },
+  {
+    "package": "com.tencent.mm",
+    "enabled": true,
+    "pad_entry": true,
+    "evidence": "round-4-on-mm",
+    "hook_status": {
+      "package": "com.tencent.mm",
+      "pid": "11060",
+      "engine": "zygisk-lsplant",
+      "hooks": "2",
+      "hits": "3",
+      "detail": "READY com.tencent.mm.ui.gk.B com.tencent.mm.ui.gk.C"
+    }
+  },
+  {
+    "package": "com.tencent.wework",
+    "enabled": false,
+    "pad_entry": false,
+    "evidence": "round-5-off-wework"
+  },
+  {
+    "package": "com.tencent.mm",
+    "enabled": false,
+    "pad_entry": false,
+    "evidence": "round-6-off-mm"
+  },
+  {
+    "package": "com.tencent.wework",
+    "enabled": true,
+    "pad_entry": true,
+    "evidence": "round-7-on-wework",
+    "hook_status": {
+      "package": "com.tencent.wework",
+      "pid": "12580",
+      "engine": "zygisk-lsplant",
+      "hooks": "1",
+      "hits": "3",
+      "detail": "READY com.tencent.wework.foundation.logic.Application.isAndroidPad"
+    }
+  },
+  {
+    "package": "com.tencent.mm",
+    "enabled": true,
+    "pad_entry": true,
+    "evidence": "round-8-on-mm",
+    "hook_status": {
+      "package": "com.tencent.mm",
+      "pid": "12954",
+      "engine": "zygisk-lsplant",
+      "hooks": "2",
+      "hits": "3",
+      "detail": "READY com.tencent.mm.ui.gk.B com.tencent.mm.ui.gk.C"
+    }
+  }
+]

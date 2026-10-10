@@ -22,3 +22,8 @@ _recon/
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# 独立原生引擎的本机构建产物
+native/output/
+native/generated/
+__pycache__/
