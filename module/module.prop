@@ -1,0 +1,6 @@
+id=tablet-spoof
+name=Tablet Spoof (WeChat/WeCom)
+version=v2.0.0
+versionCode=20000
+author=tablet-spoof
+description=Lets 企业微信 offer QR-code login by presenting a tablet-class screen. Mechanism: LSPosed companion APK (installed by this zip) - VERIFIED WORKING end-to-end. Also ships a native Zygisk payload, which loads and enforces the same 2-package whitelist but is NOT executed on Android 15/16, so it performs no spoof (cause unidentified). Scope limited to com.tencent.mm and com.tencent.wework; zero effect on any other app. Never changes density, display size or any system property.

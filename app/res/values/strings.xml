@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">平板伪装</string>
+    <string name="description">仅让微信与企业微信以平板身份登录（出现扫码登录），不影响其他任何应用。</string>
+</resources>

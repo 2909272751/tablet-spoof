@@ -1,0 +1,11 @@
+minApiVersion=102
+targetApiVersion=102
+staticScope=true
+exceptionMode=protective
+autoHotReload=false
+id=io.github.tabletspoof
+name=Tablet Spoof (WeChat/WeCom)
+version=0.1.0
+versionCode=1
+author=tablet-spoof
+description=Makes ONLY WeChat and WeCom present a tablet-class screen so QR-code login is offered. Whitelisted to com.tencent.mm and com.tencent.wework; no other app is affected.

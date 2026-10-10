@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  tablet-spoof LSPosed companion.
+
+  ANTI-DETECTION NOTES (WeCom actively checks):
+    * WeCom's dex contains `onAppCheck` / `onRootCheck` / `checkRoot` and the
+      strings `xposed` / `isDebuggerConnected` / `isRooted`
+      (risk_app_list_package, root_emulator_check_switch).
+    * Minimal footprint is therefore a design requirement, not a nicety:
+        - NO <queries> block (do not advertise that we know about the targets)
+        - NO settings activity exposed as a launcher entry unless needed
+        - NO exported components beyond the one the framework requires
+        - no logging by default
+    * The framework REQUIRES exactly one provider whose authority is derived
+      from the module id: io.github.libxposed.service.XposedProvider.
+      See: libxposed API 102 module layout.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.tabletspoof"
+    android:versionCode="1"
+    android:versionName="0.1.0">
+
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="34" />
+
+    <application
+        android:label="@string/app_name"
+        android:description="@string/description"
+        android:icon="@drawable/ic_launcher"
+        android:usesCleartextTraffic="false">
+
+        <!-- Required by libxposed API 102 so LSPosed can bind the module.
+             Authority MUST be <module id> + ".XposedService". -->
+        <provider
+            android:name="io.github.libxposed.service.XposedProvider"
+            android:authorities="io.github.tabletspoof.XposedService"
+            android:exported="true" />
+    </application>
+</manifest>

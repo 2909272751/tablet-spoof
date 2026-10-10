@@ -1,0 +1,24 @@
+# 构建产物
+build/
+app/dist/
+app/build/
+dist/
+*.idsig
+*.apk.idsig
+
+# 签名密钥（绝不上传私钥）
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+
+# 分析中间产物
+_recon/
+*.dex.tmp
+*.log
+
+# 系统
+Thumbs.db
+.DS_Store
+desktop.ini
