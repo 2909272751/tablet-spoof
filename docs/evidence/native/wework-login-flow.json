@@ -1,0 +1,63 @@
+{
+  "module_version": "3.1.0",
+  "app_version": "5.0.11",
+  "independent_native": true,
+  "lsposed_running": false,
+  "flow": [
+    {
+      "stage": "QR_RESPONSE",
+      "code": 0
+    },
+    {
+      "stage": "QR_POLL",
+      "code": 0,
+      "status": 0
+    },
+    {
+      "stage": "QR_POLL",
+      "code": 0,
+      "status": 1
+    },
+    {
+      "stage": "QR_POLL",
+      "code": 0,
+      "status": 2
+    },
+    {
+      "stage": "ENTERPRISE_LOGIN_RESULT",
+      "code": 0
+    }
+  ],
+  "user_confirmation": "已经成功登录",
+  "account_data_saved": false,
+  "lsposed_on_final_login": {
+    "dual_online_user_confirmed": true,
+    "app_restart_retained_login": true,
+    "activity": "mCurrentFocus=Window{f43b50 u0 com.tencent.wework/com.tencent.wework.launch.WwMainActivity}",
+    "class_loader": "dalvik.system.DelegateLastClassLoader",
+    "targets_match_actual_loader": true
+  },
+  "lsposed_off_final_reboot": {
+    "app_restart_retained_login": true,
+    "activity": "com.tencent.wework.launch.WwMainActivity",
+    "lsposed_running": false,
+    "old_native_probe_disabled": true,
+    "status": {
+      "package": "com.tencent.wework",
+      "pid": "7972",
+      "module_version": "3.1.0",
+      "app_version": "5.0.11",
+      "app_version_code": "82097",
+      "sdk": "36",
+      "engine": "zygisk-lsplant",
+      "rule": "NAMED_PAD_BOOLEAN_PRIMARY+DEX_PAD_PROTOCOL_ENUM",
+      "hooks": "4",
+      "hits": "1",
+      "deoptimized": "158",
+      "elapsed_ms": "2267",
+      "detail": "READY",
+      "method": "public static int com.tencent.wework.foundation.logic.Application.getDeviceType() loader=dalvik.system.DelegateLastClassLoader@8aa960c calls=1"
+    },
+    "targets_match_actual_loader": true
+  }
+}

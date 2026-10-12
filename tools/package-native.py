@@ -20,7 +20,7 @@ for name,data in payload.items():
         assert data[:4]==b'\x7fELF' and data[4]==2 and struct.unpack_from('<H',data,18)[0]==183, name
     else:
         assert data[:4]==b'dex\n',name
-for name in ['module.prop','action.sh','customize.sh','uninstall.sh','README.md']:
+for name in ['module.prop','action.sh','report.sh','customize.sh','uninstall.sh','README.md']:
     payload[name]=(native/name).read_text(encoding='utf-8-sig').replace('\r\n','\n').encode()
 for p in (native/'META-INF').rglob('*'):
     if p.is_file(): payload[p.relative_to(native).as_posix()]=p.read_bytes().replace(b'\r\n',b'\n')
@@ -61,6 +61,13 @@ with zipfile.ZipFile(source,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
     for name in ['native-adb.py','flatten-native-deps.py','prepare-native-deps.py','package-native.py']:
         z.write(root/'tools'/name,'tools/'+name)
     z.write(root/'tests/native-behavior.py','tests/native-behavior.py')
+    z.write(root/'tests/native-resolver.py','tests/native-resolver.py')
+    z.write(root/'tests/native-cache-recovery.py','tests/native-cache-recovery.py')
+    z.write(root/'tests/ResolverHarness.java','tests/ResolverHarness.java')
+    for name in ['AGENTS.md','README.md']:
+        z.write(root/name,name)
+    for p in (root/'docs/evidence/native').glob('*.json'):
+        z.write(p,p.relative_to(root).as_posix())
 for p in [target,source]:
     digest=hashlib.sha256(p.read_bytes()).hexdigest()
     p.with_suffix(p.suffix+'.sha256').write_text(digest+'  '+p.name+'\n')

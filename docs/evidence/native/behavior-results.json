@@ -18,11 +18,19 @@
     "evidence": "round-3-on-wework",
     "hook_status": {
       "package": "com.tencent.wework",
-      "pid": "10678",
+      "pid": "8830",
+      "module_version": "3.1.0",
+      "app_version": "5.0.11",
+      "app_version_code": "82097",
+      "sdk": "36",
       "engine": "zygisk-lsplant",
+      "rule": "NAMED_PAD_BOOLEAN_PRIMARY",
       "hooks": "1",
       "hits": "3",
-      "detail": "READY com.tencent.wework.foundation.logic.Application.isAndroidPad"
+      "deoptimized": "153",
+      "elapsed_ms": "3007",
+      "detail": "READY",
+      "method": "public static boolean com.tencent.wework.foundation.logic.Application.isAndroidPad() calls=3"
     }
   },
   {
@@ -32,11 +40,19 @@
     "evidence": "round-4-on-mm",
     "hook_status": {
       "package": "com.tencent.mm",
-      "pid": "11060",
+      "pid": "9751",
+      "module_version": "3.1.0",
+      "app_version": "8.0.78",
+      "app_version_code": "3180",
+      "sdk": "36",
       "engine": "zygisk-lsplant",
+      "rule": "DEX_TABLET_LOG_PAIR_AND_STATIC_WRAPPER",
       "hooks": "2",
       "hits": "3",
-      "detail": "READY com.tencent.mm.ui.gk.B com.tencent.mm.ui.gk.C"
+      "deoptimized": "238",
+      "elapsed_ms": "692",
+      "detail": "READY",
+      "method": "public static boolean com.tencent.mm.ui.gk.B() calls=1"
     }
   },
   {
@@ -58,11 +74,19 @@
     "evidence": "round-7-on-wework",
     "hook_status": {
       "package": "com.tencent.wework",
-      "pid": "12580",
+      "pid": "11306",
+      "module_version": "3.1.0",
+      "app_version": "5.0.11",
+      "app_version_code": "82097",
+      "sdk": "36",
       "engine": "zygisk-lsplant",
+      "rule": "NAMED_PAD_BOOLEAN_PRIMARY",
       "hooks": "1",
       "hits": "3",
-      "detail": "READY com.tencent.wework.foundation.logic.Application.isAndroidPad"
+      "deoptimized": "153",
+      "elapsed_ms": "1037",
+      "detail": "READY",
+      "method": "public static boolean com.tencent.wework.foundation.logic.Application.isAndroidPad() calls=3"
     }
   },
   {
@@ -72,11 +96,19 @@
     "evidence": "round-8-on-mm",
     "hook_status": {
       "package": "com.tencent.mm",
-      "pid": "12954",
+      "pid": "11638",
+      "module_version": "3.1.0",
+      "app_version": "8.0.78",
+      "app_version_code": "3180",
+      "sdk": "36",
       "engine": "zygisk-lsplant",
+      "rule": "DEX_TABLET_LOG_PAIR_AND_STATIC_WRAPPER",
       "hooks": "2",
       "hits": "3",
-      "detail": "READY com.tencent.mm.ui.gk.B com.tencent.mm.ui.gk.C"
+      "deoptimized": "238",
+      "elapsed_ms": "695",
+      "detail": "READY",
+      "method": "public static boolean com.tencent.mm.ui.gk.B() calls=1"
     }
   }
 ]

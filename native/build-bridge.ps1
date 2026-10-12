@@ -6,9 +6,10 @@ if (-not $Sdk) { $Sdk = Join-Path (Split-Path (Split-Path $root -Parent) -Parent
 $Sdk = (Resolve-Path -LiteralPath $Sdk).Path
 $bt = Get-ChildItem -LiteralPath (Join-Path $Sdk 'build-tools') -Directory | Sort-Object Name -Descending | Select-Object -First 1
 $androidJar = Get-ChildItem -LiteralPath (Join-Path $Sdk 'platforms') -Filter android.jar -Recurse | Sort-Object FullName -Descending | Select-Object -First 1 -ExpandProperty FullName
-$stage = Join-Path $env:TEMP 'tablet-spoof-native-bridge'
+$stage = Join-Path $env:TEMP ('tablet-spoof-native-bridge-' + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path "$stage\classes", "$stage\dex", "$root\output" -Force | Out-Null
-& javac -encoding UTF-8 -source 8 -target 8 -cp $androidJar -d "$stage\classes" "$root\Bridge.java"
+$sources = @(Get-ChildItem -LiteralPath $root -Filter *.java | Select-Object -ExpandProperty FullName)
+& javac -encoding UTF-8 -source 8 -target 8 -cp $androidJar -d "$stage\classes" @sources
 if ($LASTEXITCODE -ne 0) { throw 'Java build failed' }
 $classes = @(Get-ChildItem "$stage\classes" -Recurse -Filter *.class | Select-Object -ExpandProperty FullName)
 & "$($bt.FullName)\d8.bat" --min-api 26 --lib $androidJar --output "$stage\dex" @classes

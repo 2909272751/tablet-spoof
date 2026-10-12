@@ -1,0 +1,34 @@
+{
+  "package": "com.tencent.mm",
+  "module_version": "3.1.0",
+  "app_version": "8.0.78",
+  "scenario": "malformed_cache",
+  "lsposed_running": false,
+  "recovered": true,
+  "pad_entry": true,
+  "status": {
+    "package": "com.tencent.mm",
+    "pid": "9119",
+    "module_version": "3.1.0",
+    "app_version": "8.0.78",
+    "app_version_code": "3180",
+    "sdk": "36",
+    "engine": "zygisk-lsplant",
+    "rule": "DEX_TABLET_LOG_PAIR_AND_STATIC_WRAPPER",
+    "hooks": "2",
+    "hits": "3",
+    "deoptimized": "238",
+    "elapsed_ms": "5873",
+    "detail": "READY",
+    "method": "public static boolean com.tencent.mm.ui.gk.B() loader=dalvik.system.PathClassLoader@2fcf4d4 calls=2"
+  },
+  "diagnostics": [
+    "1791770467601 pid=9119 CACHE_READ error=org.json.JSONException message=Expected ':' after invalid at character 10 of {invalid cache test",
+    "1791770472194 pid=9119 DISCOVERY targets=2 dex_files=17 scanned_bytes=186830948",
+    "1791770472228 pid=9119 CALLERS_ONE_PASS validated_owner=Lcom/tencent/mm/ui/gk; callers=177",
+    "1791770472343 pid=9119 CALLER_INITIALIZERS_SKIPPED count=21",
+    "1791770472343 pid=9119 READY hooks=2 deoptimized=238 elapsed_ms=5402",
+    "1791770472351 pid=9119 TARGET_LOADER method=C installed=dalvik.system.PathClassLoader@2fcf4d4 actual=dalvik.system.PathClassLoader@2fcf4d4 same_class=true",
+    "1791770472351 pid=9119 TARGET_LOADER method=B installed=dalvik.system.PathClassLoader@2fcf4d4 actual=dalvik.system.PathClassLoader@2fcf4d4 same_class=true"
+  ]
+}
